@@ -23,7 +23,7 @@
     "prepublish": "npm run dist && npm run standalone"
   },
   "dependencies": {
-    "react-autowhatever": "^3.0.0",
+    "react-autowhatever": "github:xomyaq/react-autowhatever",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1"
   },
