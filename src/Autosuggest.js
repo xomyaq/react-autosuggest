@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { inputFocused, inputBlurred, inputChanged, updateFocusedSuggestion,
          revealSuggestions, closeSuggestions } from './reducerAndActions';
-import Autowhatever from '../../react-autowhatever';
+import Autowhatever from 'react-autowhatever';
 
 function mapStateToProps(state) {
   return {
@@ -312,7 +312,8 @@ class Autosuggest extends Component {
     const renderItem = item => renderSuggestion(item, { value, valueBeforeUpDown });
 
     return (
-      <Autowhatever 
+      <Autowhatever
+        {...autowhateverInputProps}
         multiSection={multiSection}
         items={items}
         renderItem={renderItem}
