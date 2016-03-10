@@ -82,8 +82,7 @@ class Autosuggest extends Component {
               isCollapsed, revealSuggestions, lastAction } = nextProps;
       const { value } = inputProps;
 
-      if (isCollapsed && lastAction !== 'click' && lastAction !== 'enter' &&
-          suggestions.length > 0 && shouldRenderSuggestions(value)) {
+      if (isCollapsed && suggestions.length > 0 && shouldRenderSuggestions(value)) {
         revealSuggestions();
       }
     }
@@ -325,7 +324,7 @@ class Autosuggest extends Component {
         itemProps={itemProps}
         theme={theme}
         id={id}
-        ref={this.saveInput} 
+        ref={this.saveInput}
       />
     );
   }

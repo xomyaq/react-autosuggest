@@ -87,7 +87,7 @@ var Autosuggest = function (_Component) {
         var value = inputProps.value;
 
 
-        if (isCollapsed && lastAction !== 'click' && lastAction !== 'enter' && suggestions.length > 0 && shouldRenderSuggestions(value)) {
+        if (isCollapsed && suggestions.length > 0 && shouldRenderSuggestions(value)) {
           revealSuggestions();
         }
       }
@@ -377,7 +377,8 @@ var Autosuggest = function (_Component) {
         return renderSuggestion(item, { value: value, valueBeforeUpDown: valueBeforeUpDown });
       };
 
-      return _react2.default.createElement(_reactAutowhatever2.default, { multiSection: multiSection,
+      return _react2.default.createElement(_reactAutowhatever2.default, _extends({}, autowhateverInputProps, {
+        multiSection: multiSection,
         items: items,
         renderItem: renderItem,
         renderSectionTitle: renderSectionTitle,
@@ -388,7 +389,8 @@ var Autosuggest = function (_Component) {
         itemProps: itemProps,
         theme: theme,
         id: id,
-        ref: this.saveInput });
+        ref: this.saveInput
+      }));
     }
   }]);
 
