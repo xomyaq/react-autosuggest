@@ -176,13 +176,13 @@ class Autosuggest extends Component {
     const {
       suggestions, renderSuggestion, inputProps, shouldRenderSuggestions,
       onSuggestionSelected, multiSection, renderSectionTitle, id,
-      getSectionSuggestions, focusInputOnSuggestionClick, theme, isFocused,
+      getSectionSuggestions, focusInputOnSuggestionClick, theme,
       isCollapsed, focusedSectionIndex, focusedSuggestionIndex,
       valueBeforeUpDown, inputFocused, inputBlurred, inputChanged,
       updateFocusedSuggestion, revealSuggestions, closeSuggestions
     } = this.props;
     const { value, onBlur, onFocus, onKeyDown } = inputProps;
-    const isOpen = isFocused && !isCollapsed && this.willRenderSuggestions();
+    const isOpen = !isCollapsed && this.willRenderSuggestions();
     const items = (isOpen ? suggestions : []);
     const autowhateverInputProps = {
       ...inputProps,

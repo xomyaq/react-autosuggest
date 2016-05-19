@@ -219,7 +219,6 @@ var Autosuggest = function (_Component) {
       var getSectionSuggestions = _props5.getSectionSuggestions;
       var focusInputOnSuggestionClick = _props5.focusInputOnSuggestionClick;
       var theme = _props5.theme;
-      var isFocused = _props5.isFocused;
       var isCollapsed = _props5.isCollapsed;
       var focusedSectionIndex = _props5.focusedSectionIndex;
       var focusedSuggestionIndex = _props5.focusedSuggestionIndex;
@@ -235,7 +234,7 @@ var Autosuggest = function (_Component) {
       var _onFocus = inputProps.onFocus;
       var _onKeyDown = inputProps.onKeyDown;
 
-      var isOpen = isFocused && !isCollapsed && this.willRenderSuggestions();
+      var isOpen = !isCollapsed && this.willRenderSuggestions();
       var items = isOpen ? suggestions : [];
       var autowhateverInputProps = _extends({}, inputProps, {
         onFocus: function onFocus(event) {
